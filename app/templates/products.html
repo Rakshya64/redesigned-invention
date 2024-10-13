@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Our Products</h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Image</th>
+                <th scope="col">Name</th>
+                <th scope="col">Tag</th>
+                <th scope="col">Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for product in products %}
+            <tr>
+                <td>
+                    <img src="{{ product['image_path'] }}" alt="{{ product['name'] }}" width="100">
+                </td>
+                <td>{{ product['name'] }}</td>
+                <td>{{ product['tag'] }}</td>
+                <td>${{ product['price'] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

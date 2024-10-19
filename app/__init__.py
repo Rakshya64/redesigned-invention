@@ -1,9 +1,15 @@
 from flask import Flask, render_template
 from pymongo import MongoClient
+from dotenv import load_dotenv
+import os
+load_dotenv()
+username=os.getenv('MONGODB_USERNAME')
+userpassword =os.getenv('MONGODB_PASSWORD')
 
 app = Flask(__name__)
+mongourl=f"mongodb+srv://{username}:{userpassword}@cluster0.kshga.mongodb.net/"
 
-client = MongoClient("mongodb+srv://rakchya64d:Sry85NbqqZttrTnW@cluster0.kshga.mongodb.net/")
+client = MongoClient(mongourl)
 db = client.shop_db
 products_collction = db.products
 

@@ -16,14 +16,14 @@ class DatabaseTest(unittest.TestCase):
         # Insert the data into the MongoDB collection
         insertion_result = self.db.insert_one(new_data)
 
-        # Use assertions to ensure the document was inserted
+
         # Verify the insertion result contains an ObjectId, indicating a successful insert
         self.assertIsNotNone(insertion_result.inserted_id, "Document was not successfully inserted.")
 
         # Query the database to check the data’s presence
         inserted_data = self.db.find_one({"field": "new_value"})
 
-        # Assertions to check that the document is present and has the expected content
+
         self.assertIsNotNone(inserted_data, "Inserted data is not found in the database.")
         self.assertEqual(inserted_data["field"], "new_value", "The inserted data does not match the expected value.")
 

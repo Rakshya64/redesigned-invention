@@ -15,17 +15,18 @@ to automatically test the code on every push to the `main` branch.
 
 1. Clone the repository:
   
-   git clone <repository-url>
+   `git clone <repository-url>`
    
 2. Install dependencies:
    
-   python -m pip install --upgrade pip
-   pip install -r requirements.txt
+   `python -m pip install --upgrade pip`
+   `pip install -r requirements.txt`
    
 3. Environment Variables: Set up environment variables in a `.env` file:
    
-   MONGODB_USERNAME
-   MONGODB_PASSWORD
+   `MONGODB_USERNAME=<your-mongodb-username>`
+   `MONGODB_PASSWORD=<your-mongodb-password>`
+
    
 
 # Unit Tests

@@ -24,15 +24,15 @@ to automatically test the code on every push to the `main` branch.
    
 3. Environment Variables: Set up environment variables in a `.env` file:
    
-   MONGODB_USERNAME=<your-mongodb-username>
-   MONGODB_PASSWORD=<your-mongodb-password>
+   MONGODB_USERNAME
+   MONGODB_PASSWORD
    
 
 # Unit Tests
 
 The application includes three main unit tests to verify route and database functionality:
 
-1. Route Test - Invalid Method for Home Route**:
+1. Route Test - Invalid Method for Home Route:
    - Purpose: Ensures that the '/' (home) route only allows the correct HTTP method (GET).
    - Test Details: Sends a POST request to the '/' route and expects a '405 Method Not Allowed' status.
 
